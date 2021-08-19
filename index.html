@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            background: none;
+            border: none;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            border-radius: 3px;
+        }
+
+        h1 {
+            opacity: 0;
+            transition: 0.5s ease-in-out;
+            text-transform: uppercase;
+        }
+        h1.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <button>See name</button>
+    <h1>Taiwo Hussen Kehinde</h1>
+    <script>
+        const button = document.querySelector('button');
+        const name = document.querySelector('h1');
+        button.addEventListener('click', () => {
+            name.classList.add('active');
+        })
+    </script>
+</body>
+</html>
